@@ -43,7 +43,7 @@ class Spider:
         for index, page_url in enumerate(page_urls):
             res = requests.get(page_url)
             soup = BeautifulSoup(res.text, self.parser)
-            print "You are now in page ", (index + 1), " !!!"
+            print ("You are now in page ", (index + 1), " !!!")
 
             ### Test if the crawler is blocked by the Google robot check
             page_links = soup.select('div[id="gs_nml"] a')
